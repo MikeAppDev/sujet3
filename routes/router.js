@@ -1,5 +1,5 @@
 import express from "express";
-import { createPastrie, getPastries } from "../controllers/homeController.js";
+import { createPastrie, getPastries } from "../controllers/pastriesController.js";
 
 
 const router = express.Router();

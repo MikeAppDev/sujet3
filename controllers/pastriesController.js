@@ -1,10 +1,10 @@
-import HomeModel from "../models/HomeModel.js"
+import PastriesModel from "../models/PastriesModel.js"
 
 // next ? 
 // on créer un const pour créer/ajouter un element par le biais du modèle homeModel 
 export const createPastrie = async (req, res, next) => {
     let {name, quantity} = req.body
-    HomeModel.create({
+    PastriesModel.create({
         name: name,
         quantity: quantity
     })
@@ -14,10 +14,9 @@ export const createPastrie = async (req, res, next) => {
         .catch((e) => res.status(400).json({error: e}))
 }
 
-
 export const getPastries = async (req, res) => {
     // res.status(200).json({ message: 'Hello World' })
     // find renvoit la valeur du premier element trouvé
-    let data = await HomeModel.find()
+    let data = await PastriesModel.find()
     res.status(200).json({data})
 }
