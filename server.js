@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./db.js";
-import dicesRouter from "./routes/router.js"
-import homeRouter from "./routes/dices.js"
+import homeRouter from "./routes/router.js"
+import dicesRouter from "./routes/dices.js"
 
 
 const port = process.env.port || 3100;
@@ -16,6 +16,7 @@ const port = process.env.port || 3100;
       async function init(){
         app.use('/', homeRouter)
         app.use('/', dicesRouter)
+        
     }
 
 

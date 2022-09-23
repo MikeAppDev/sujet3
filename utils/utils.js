@@ -10,12 +10,12 @@ export const rollDices = () => {
     return dices;
 }
 
-export const results = () => {
+// 
+export const results = (dices) => {
     let resultats = {}
 
-    for (let index = 0; index < 6; index++) {
+    for (let index = 1; index <= 6; index++) {
         resultats[index] = 0
-        
     }
 
     for (let index = 0; index < dices.length; index++) {
