@@ -4,6 +4,6 @@ import { getDices } from "../controllers/dicesController.js";
 
 const router = express.Router();
 
-router.post('/dices', getDices)
+router.get('/dices', getDices)
 
 export default router
